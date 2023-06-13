@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
 using System.Diagnostics;
+using Microsoft.VisualBasic.Logging;
 
 namespace GitHub_Project_Readme_Generator.Klassen
 {
@@ -75,8 +76,21 @@ namespace GitHub_Project_Readme_Generator.Klassen
                 GenerateIssueTemplateMD();
             }
             GenerateImageFolder();
+            CopyIcomToFolder();
 
             return readme;
+        }
+
+        public void CopyIcomToFolder()
+        {
+            // Datei in den Zielordner kopieren
+            string destinationFolderPath = GlobalData.ProjectPath + "/images/";
+
+            string fileName = Path.GetFileName("Bin\\img\\logo.png");
+            string destinationFilePath = Path.Combine(destinationFolderPath, fileName);
+            File.Copy("Bin\\img\\logo.png", destinationFilePath);
+            MessageBox.Show("Datei erfolgreich kopiert!");
+            
         }
 
         public void GenerateImageFolder()
@@ -86,7 +100,6 @@ namespace GitHub_Project_Readme_Generator.Klassen
             Directory.CreateDirectory(path);
             MessageBox.Show("Ordner erfolgreich erstellt!");
 
-            Process.Start(path + "/images/");
         }
         public void GenerateISSUETEMPLATEFolder()
         {
