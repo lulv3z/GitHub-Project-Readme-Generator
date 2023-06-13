@@ -297,6 +297,9 @@
             this.Controls.Add(this.projectNameTxt);
             this.Controls.Add(this.AboutTheProjectTxt);
             this.Controls.Add(this.repositoryLinkTxt);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(814, 530);
+            this.MinimumSize = new System.Drawing.Size(814, 530);
             this.Name = "Frm_MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GitHub Project readme Generator";

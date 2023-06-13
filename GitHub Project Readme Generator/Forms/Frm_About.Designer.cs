@@ -66,6 +66,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.aboutText);
             this.Controls.Add(this.saveBtn);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(818, 497);
             this.MinimumSize = new System.Drawing.Size(818, 497);
             this.Name = "Frm_About";

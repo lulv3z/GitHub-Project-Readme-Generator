@@ -30,6 +30,9 @@ The GitHub Project Readme Generator is a useful tool that allows developers to q
 
 This generator automates the process by inserting the user-provided data into a pre-made Readme template. The user only needs to provide the relevant information, such as the project name, a description and more.
 ### Features
-- **Feature1:** Description
-- **Feature1:** Description
-- **Feature1:** Description
+- Generiert automatisch eine professionelle Readme-Datei für GitHub-Projekte
+- Einfache Benutzeroberfläche
+- Speichert die generierte Readme-Datei für eine einfache Integration in das GitHub-Projekt
+
+### License
+This project is licensed under the MIT License. For more information, please see the ``license.txt``
