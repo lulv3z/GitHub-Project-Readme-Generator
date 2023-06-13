@@ -14,6 +14,17 @@ namespace GitHub_Project_Readme_Generator.Klassen
         public static string RepositoryLink { get; set; }
         public static string ProjectPath { get; set; }
 
+        public static string AboutText { get; set; }
+
+
+        public static bool isFeature { get; set; }
+        public static bool isFirstTime { get; set; }
+
+        public enum EditorType
+        {
+            About
+        }
+
 
     }
 }

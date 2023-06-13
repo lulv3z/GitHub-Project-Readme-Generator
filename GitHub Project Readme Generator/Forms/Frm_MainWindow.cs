@@ -21,6 +21,11 @@ namespace GitHub_Project_Readme_Generator.Forms
             InitializeComponent();
         }
 
+        private void Frm_MainWindow_Load(object sender, EventArgs e)
+        {
+            updater.Start();
+        }
+
         private void changeProjectPathBtn_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
@@ -48,6 +53,42 @@ namespace GitHub_Project_Readme_Generator.Forms
 
 
             Console.WriteLine(readme);
+        }
+
+        private void AboutTheProjectTxt_Click(object sender, EventArgs e)
+        {
+            Frm_About about = new Frm_About();
+            about.ShowDialog();
+        }
+
+        private void updater_Tick(object sender, EventArgs e)
+        {
+            // Update all 5 sek
+            AboutTheProjectTxt.Text = GlobalData.AboutText;
+        }
+
+        private void addFeaturesCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (addFeaturesCB.Checked)
+            {
+                GlobalData.isFeature = true;
+            }
+            else
+            {
+                GlobalData.isFeature = false;
+            }
+        }
+
+        private void firstTimeGenerateCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (firstTimeGenerateCB.Checked)
+            {
+                GlobalData.isFirstTime = true;
+            }
+            else
+            {
+                GlobalData.isFirstTime = false;
+            }
         }
     }
 }
