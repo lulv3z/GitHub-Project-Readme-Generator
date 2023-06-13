@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_engine.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\..\..\..\..\..\VS Assets - UI frameworks\GunaFrameWorkCracked-main\Guna.UI2.dll</HintPath>
@@ -99,6 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\image_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_engine.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

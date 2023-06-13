@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
 [assembly: AssemblyTitle("GitHub Project Readme Generator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("The GitHub Project Readme Generator is a useful tool that allows developers to quickly and easily generate professional Readme files for their GitHub projects.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("lulv3z")]
 [assembly: AssemblyProduct("GitHub Project Readme Generator")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("lulv3z")]
 [assembly: AssemblyCulture("")]
 
 // Durch Festlegen von ComVisible auf FALSE werden die Typen in dieser Assembly
