@@ -36,3 +36,10 @@ This generator automates the process by inserting the user-provided data into a 
 
 ### License
 This project is licensed under the MIT License. For more information, please see the ``license.txt``
+
+<!-- CONTACT -->
+## Contact
+
+lulv3z - [@lulv3z](https://twitter.com/lulv3z) - lulv3z.contact@gmail.com
+
+Project Link: [https://github.com/lulv3z/GitHub-Profile-Readme-Generator](https://github.com/lulv3z/GitHub-Profile-Readme-Generator)
