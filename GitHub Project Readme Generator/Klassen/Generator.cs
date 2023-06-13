@@ -11,6 +11,7 @@ using System.Windows.Forms.Design.Behavior;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using System.IO;
+using System.Diagnostics;
 
 namespace GitHub_Project_Readme_Generator.Klassen
 {
@@ -73,10 +74,20 @@ namespace GitHub_Project_Readme_Generator.Klassen
                 GenerateISSUETEMPLATEFolder();
                 GenerateIssueTemplateMD();
             }
+            GenerateImageFolder();
 
             return readme;
         }
 
+        public void GenerateImageFolder()
+        {
+            string path = GlobalData.ProjectPath + "/" + "images";
+            // Den Ordner erstellen
+            Directory.CreateDirectory(path);
+            MessageBox.Show("Ordner erfolgreich erstellt!");
+
+            Process.Start(path + "/images/");
+        }
         public void GenerateISSUETEMPLATEFolder()
         {
             string path = GlobalData.ProjectPath + "/" + ".github" + "/" + $@"ISSUE_TEMPLATE";
