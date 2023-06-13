@@ -68,7 +68,7 @@ namespace GitHub_Project_Readme_Generator.Klassen
                 "- **Feature1:** Description" + "\n";
             }
 
-            if (GlobalData.isFirstTime)
+            if (GlobalData.createIssueTemplate)
             {
                 GenerateISSUETEMPLATEFolder();
                 GenerateIssueTemplateMD();

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -88,12 +89,34 @@ namespace GitHub_Project_Readme_Generator.Forms
         {
             if (firstTimeGenerateCB.Checked)
             {
-                GlobalData.isFirstTime = true;
+                GlobalData.createIssueTemplate = true;
             }
             else
             {
-                GlobalData.isFirstTime = false;
+                GlobalData.createIssueTemplate = false;
             }
+        }
+
+        private void createChangelogCB_CheckedChanged(object sender, EventArgs e)
+        {
+            if (createChangelogCB.Checked)
+            {
+                GlobalData.createChangelog = true;
+            }
+            else
+            {
+                GlobalData.createChangelog = false;
+            }
+        }
+
+        private void githubBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/lulv3z/GitHub-Project-Readme-Generator");
+        }
+
+        private void supportBtn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/lulv3z/GitHub-Project-Readme-Generator/issues/new/choose");
         }
     }
 }

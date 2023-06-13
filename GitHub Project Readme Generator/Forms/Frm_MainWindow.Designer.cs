@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MainWindow));
             this.repositoryLinkTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.projectNameTxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.descriptionTxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,6 +40,14 @@
             this.updater = new System.Windows.Forms.Timer(this.components);
             this.addFeaturesCB = new Guna.UI2.WinForms.Guna2CheckBox();
             this.firstTimeGenerateCB = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.createChangelogCB = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.app_buttombar = new System.Windows.Forms.Panel();
+            this.githubBtn = new System.Windows.Forms.PictureBox();
+            this.supportBtn = new System.Windows.Forms.PictureBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.app_buttombar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.githubBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supportBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryLinkTxt
@@ -144,11 +153,12 @@
             this.generateReadmeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.generateReadmeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.generateReadmeBtn.ForeColor = System.Drawing.Color.White;
-            this.generateReadmeBtn.Location = new System.Drawing.Point(982, 521);
+            this.generateReadmeBtn.Location = new System.Drawing.Point(591, 401);
             this.generateReadmeBtn.Name = "generateReadmeBtn";
             this.generateReadmeBtn.Size = new System.Drawing.Size(180, 45);
             this.generateReadmeBtn.TabIndex = 4;
             this.generateReadmeBtn.Text = "Generate";
+            this.toolTip.SetToolTip(this.generateReadmeBtn, "Generate");
             this.generateReadmeBtn.Click += new System.EventHandler(this.generateReadmeBtn_Click);
             // 
             // AboutTheProjectTxt
@@ -191,6 +201,7 @@
             this.addFeaturesCB.Size = new System.Drawing.Size(110, 20);
             this.addFeaturesCB.TabIndex = 5;
             this.addFeaturesCB.Text = "Add Features";
+            this.toolTip.SetToolTip(this.addFeaturesCB, "Adds a feature post");
             this.addFeaturesCB.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.addFeaturesCB.UncheckedState.BorderRadius = 0;
             this.addFeaturesCB.UncheckedState.BorderThickness = 0;
@@ -206,20 +217,77 @@
             this.firstTimeGenerateCB.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firstTimeGenerateCB.Location = new System.Drawing.Point(26, 263);
             this.firstTimeGenerateCB.Name = "firstTimeGenerateCB";
-            this.firstTimeGenerateCB.Size = new System.Drawing.Size(147, 20);
+            this.firstTimeGenerateCB.Size = new System.Drawing.Size(165, 20);
             this.firstTimeGenerateCB.TabIndex = 6;
-            this.firstTimeGenerateCB.Text = "First Time Generate";
+            this.firstTimeGenerateCB.Text = "Create Issue Template";
+            this.toolTip.SetToolTip(this.firstTimeGenerateCB, "automatically creates an issue template");
             this.firstTimeGenerateCB.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.firstTimeGenerateCB.UncheckedState.BorderRadius = 0;
             this.firstTimeGenerateCB.UncheckedState.BorderThickness = 0;
             this.firstTimeGenerateCB.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.firstTimeGenerateCB.CheckedChanged += new System.EventHandler(this.firstTimeGenerateCB_CheckedChanged);
             // 
+            // createChangelogCB
+            // 
+            this.createChangelogCB.AutoSize = true;
+            this.createChangelogCB.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.createChangelogCB.CheckedState.BorderRadius = 0;
+            this.createChangelogCB.CheckedState.BorderThickness = 0;
+            this.createChangelogCB.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.createChangelogCB.Location = new System.Drawing.Point(26, 289);
+            this.createChangelogCB.Name = "createChangelogCB";
+            this.createChangelogCB.Size = new System.Drawing.Size(138, 20);
+            this.createChangelogCB.TabIndex = 7;
+            this.createChangelogCB.Text = "Create Changelog";
+            this.toolTip.SetToolTip(this.createChangelogCB, "automatically creates a changelog.md file");
+            this.createChangelogCB.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.createChangelogCB.UncheckedState.BorderRadius = 0;
+            this.createChangelogCB.UncheckedState.BorderThickness = 0;
+            this.createChangelogCB.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.createChangelogCB.CheckedChanged += new System.EventHandler(this.createChangelogCB_CheckedChanged);
+            // 
+            // app_buttombar
+            // 
+            this.app_buttombar.BackColor = System.Drawing.Color.LightGray;
+            this.app_buttombar.Controls.Add(this.supportBtn);
+            this.app_buttombar.Controls.Add(this.githubBtn);
+            this.app_buttombar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.app_buttombar.Location = new System.Drawing.Point(0, 452);
+            this.app_buttombar.Name = "app_buttombar";
+            this.app_buttombar.Size = new System.Drawing.Size(796, 31);
+            this.app_buttombar.TabIndex = 8;
+            // 
+            // githubBtn
+            // 
+            this.githubBtn.Image = ((System.Drawing.Image)(resources.GetObject("githubBtn.Image")));
+            this.githubBtn.Location = new System.Drawing.Point(754, 0);
+            this.githubBtn.Name = "githubBtn";
+            this.githubBtn.Size = new System.Drawing.Size(42, 31);
+            this.githubBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.githubBtn.TabIndex = 9;
+            this.githubBtn.TabStop = false;
+            this.toolTip.SetToolTip(this.githubBtn, "Open GitHub");
+            this.githubBtn.Click += new System.EventHandler(this.githubBtn_Click);
+            // 
+            // supportBtn
+            // 
+            this.supportBtn.Image = ((System.Drawing.Image)(resources.GetObject("supportBtn.Image")));
+            this.supportBtn.Location = new System.Drawing.Point(705, 0);
+            this.supportBtn.Name = "supportBtn";
+            this.supportBtn.Size = new System.Drawing.Size(43, 31);
+            this.supportBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.supportBtn.TabIndex = 9;
+            this.supportBtn.TabStop = false;
+            this.toolTip.SetToolTip(this.supportBtn, "Issues / Feature Request");
+            this.supportBtn.Click += new System.EventHandler(this.supportBtn_Click);
+            // 
             // Frm_MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 578);
+            this.ClientSize = new System.Drawing.Size(796, 483);
+            this.Controls.Add(this.app_buttombar);
+            this.Controls.Add(this.createChangelogCB);
             this.Controls.Add(this.firstTimeGenerateCB);
             this.Controls.Add(this.addFeaturesCB);
             this.Controls.Add(this.generateReadmeBtn);
@@ -229,11 +297,13 @@
             this.Controls.Add(this.projectNameTxt);
             this.Controls.Add(this.AboutTheProjectTxt);
             this.Controls.Add(this.repositoryLinkTxt);
-            this.MinimumSize = new System.Drawing.Size(1192, 625);
             this.Name = "Frm_MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GitHub Project readme Generator";
             this.Load += new System.EventHandler(this.Frm_MainWindow_Load);
+            this.app_buttombar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.githubBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supportBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +321,10 @@
         private System.Windows.Forms.Timer updater;
         private Guna.UI2.WinForms.Guna2CheckBox addFeaturesCB;
         private Guna.UI2.WinForms.Guna2CheckBox firstTimeGenerateCB;
+        private Guna.UI2.WinForms.Guna2CheckBox createChangelogCB;
+        private System.Windows.Forms.Panel app_buttombar;
+        private System.Windows.Forms.PictureBox githubBtn;
+        private System.Windows.Forms.PictureBox supportBtn;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

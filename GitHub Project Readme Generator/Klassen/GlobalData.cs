@@ -18,7 +18,8 @@ namespace GitHub_Project_Readme_Generator.Klassen
 
 
         public static bool isFeature { get; set; }
-        public static bool isFirstTime { get; set; }
+        public static bool createIssueTemplate { get; set; }
+        public static bool createChangelog { get; set; }
 
         public enum EditorType
         {
