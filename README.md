@@ -8,18 +8,18 @@
 
 <h3 align=\"center\">GitHub Project Readme Generator</h3>
 <p align="center">
-The GitHub Project Readme Generator is a useful tool that allows developers to quickly and easily generate professional Readme files for their GitHub projects.
+The GitHub Project Readme Generator is a useful tool that allows developers to quickly and easily generate professional Readme files for their GitHub projects. 
 <br /> 
 <a href="https://github.com/lulv3z/GitHub-Project-Readme-Generator"><strong>Explore the docs »</strong></a>
 <br /> 
 <br /> 
 <a href="https://github.com/lulv3z/GitHub-Project-Readme-Generator/releases/latest">Download</a>
 ·
-<a href="https://github.com/lulv3z/GitHub-Project-Readme-Generatorblob/master/CHANGELOG.md">Changelog</a>
+<a href="https://github.com/lulv3z/GitHub-Project-Readme-Generator/blob/master/CHANGELOG.md">Changelog</a>
 ·
-<a href="https://github.com/lulv3z/GitHub-Project-Readme-Generatorissues/new/choose">Report Bug</a>
+<a href="https://github.com/lulv3z/GitHub-Project-Readme-Generator/issues/new/choose">Report Bug</a>
 ·
-<a href="https://github.com/lulv3z/GitHub-Project-Readme-Generatorissues/new/choose">Request Feature</a>
+<a href="https://github.com/lulv3z/GitHub-Project-Readme-Generator/issues/new/choose">Request Feature</a>
 </p> 
 </div>
 

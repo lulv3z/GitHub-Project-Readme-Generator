@@ -39,11 +39,11 @@ namespace GitHub_Project_Readme_Generator.Klassen
                                 "<br /> \n" +
                                 $@"<a href=""{GlobalData.RepositoryLink + "/releases/latest"}"">Download</a>" + "\n" +
                                 "·\n" +
-                                $@"<a href=""{GlobalData.RepositoryLink + "blob/master/CHANGELOG.md"}"">Changelog</a>" + "\n" +
+                                $@"<a href=""{GlobalData.RepositoryLink + "/blob/master/CHANGELOG.md"}"">Changelog</a>" + "\n" +
                                 "·\n" +
-                                $@"<a href=""{GlobalData.RepositoryLink + "issues/new/choose"}"">Report Bug</a>" + "\n" +
+                                $@"<a href=""{GlobalData.RepositoryLink + "/issues/new/choose"}"">Report Bug</a>" + "\n" +
                                 "·\n" +
-                                $@"<a href=""{GlobalData.RepositoryLink + "issues/new/choose"}"">Request Feature</a>" + "\n" +
+                                $@"<a href=""{GlobalData.RepositoryLink + "/issues/new/choose"}"">Request Feature</a>" + "\n" +
                                 "</p> \n" +
                             "</div>" + "\n";
 
