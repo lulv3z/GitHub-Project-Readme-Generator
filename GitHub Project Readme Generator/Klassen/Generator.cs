@@ -69,16 +69,40 @@ namespace GitHub_Project_Readme_Generator.Klassen
 
                 "- **Feature1:** Description" + "\n";
             }
-
             if (GlobalData.createIssueTemplate)
             {
                 GenerateISSUETEMPLATEFolder();
                 GenerateIssueTemplateMD();
             }
+            if (GlobalData.createChangelog)
+            {
+                CreateChangelogFile();
+            }
+
             GenerateImageFolder();
             CopyIcomToFolder();
 
             return readme;
+        }
+
+        public void CreateChangelogFile()
+        {
+            string path = GlobalData.ProjectPath;
+            string filePath = path + "/" + "CHANGELOG.md";
+
+            string text = @"# Changelog" + "\n" +
+
+                            "## v1.0.0" + "\n" +
+
+                            "### Added or Changed" + "\n" +
+                            "- Added This Changelog :)" + "\n" +
+                            "\n" +
+                            "### Removed" + "\n" +
+
+                            "- RotateAnimation (may come back in a later version)" + "\n";
+
+            File.WriteAllText(filePath, text);
+            MessageBox.Show("bug CHANGELOG.md erfolgreich erstellt!");
         }
 
         public void CopyIcomToFolder()

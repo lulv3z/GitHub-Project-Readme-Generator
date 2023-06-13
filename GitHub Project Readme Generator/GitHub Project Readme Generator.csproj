@@ -101,10 +101,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="img\image_96px.png" />
+    <Content Include="icons8_engine.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icons8_engine.ico" />
+    <Folder Include="img\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
