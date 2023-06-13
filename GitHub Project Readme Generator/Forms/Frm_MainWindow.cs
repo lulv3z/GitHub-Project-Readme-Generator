@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,7 +51,11 @@ namespace GitHub_Project_Readme_Generator.Forms
 
             Generator gen = new Generator();
             string readme = gen.GenerateReadme();
+            string path = GlobalData.ProjectPath + "/README.md";
 
+            // Datei erstellen oder ersetzen
+            File.WriteAllText(path, readme);
+            MessageBox.Show("README.md Datei erfolgreich erstellt oder ersetzt!");
 
             Console.WriteLine(readme);
         }
